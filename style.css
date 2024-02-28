@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.main{
+    padding: 15px 0px;
+    user-select: none;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(15, 36, 46);
+    
+}
+.header{
+    color: #b5b5b5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+span{
+    font-size: 25px;
+    color: chartreuse;
+}
+#Searchform{
+    display: flex;
+    height: 100%;
+    width: 35%;
+}
+#Searcharea{
+    color: #fff;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: transparent;
+    padding: 0px 15px;
+    /* background-color: red; */
+    height: 40px;
+    width: 80%;
+    border: 1px solid #fff;
+    outline: none;
+}
+#Searcharea::placeholder{
+    opacity: 0.5;
+    color: #fff;
+}
+#searchbutton{
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+    font-size: 30px;
+    color: chartreuse;
+    background-color: transparent;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: calc(100% - 80%);
+    border: none;
+    outline: none;
+}
+#searchbutton:hover{
+    color: chocolate;
+    scale: 0.87;
+}
+#loadmorebtn{
+    cursor: pointer;
+    display: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: all 0.2s;
+    margin-top: 25px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+#loadmorebtn:hover{
+    scale: 0.95;
+    border: 1px solid lime;
+    color: #000;
+    background-color: rgb(84, 165, 2);
+}
+#imagecontainer{
+    text-align: center;
+    width: 80%;
+    min-height: 120px;
+    /* background-color: #fff; */
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #c9c9c9a3;
+    margin-top:25px ;
+    font-weight: 100;
+}
+#images{
+    border-radius: 5px;
+    transition: all 0.3s;
+    margin: 10px;
+    height: 150px;
+}
+#images:hover{
+    scale: 1.07;
+}
+#images:nth-child(even){
+   border: 1px solid crimson;
+}
+h1{
+    font-size: 20px;
+}
