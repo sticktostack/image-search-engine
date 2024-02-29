@@ -36,10 +36,7 @@ span{
 }
 #Searcharea{
     color: #fff;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-radius: 30px;
     background-color: transparent;
     padding: 0px 15px;
     /* background-color: red; */
@@ -108,8 +105,33 @@ span{
     scale: 1.07;
 }
 #images:nth-child(even){
-   border: 1px solid crimson;
+   border: 3px solid rgb(73, 211, 126);
 }
 h1{
     font-size: 20px;
 }
+#orientations{
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 15px;
+    background-color: transparent;
+    padding: 10px 12px;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    width: 130px;
+    outline: none;
+}
+#blank{
+    display: none;
+}
+#orientations option{
+    background-color: #000;
+    color: #fff;
+}
+#orientations:focus {
+    color: #7FFF00;
+    outline: none; 
+    border-color: #7FFF00;
+    box-shadow: 0 0 5px #7FFF00; 
+  }
