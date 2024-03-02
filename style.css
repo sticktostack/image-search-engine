@@ -96,16 +96,18 @@ span{
     font-weight: 100;
 }
 #images{
+    opacity: 0.9;
     border-radius: 5px;
     transition: all 0.3s;
     margin: 10px;
-    height: 150px;
+    height: 220px;
 }
 #images:hover{
+    opacity: 1;
     scale: 1.07;
 }
 #images:nth-child(even){
-   border: 3px solid rgb(73, 211, 126);
+   border: 2px solid #d6d6d6;
 }
 h1{
     font-size: 20px;

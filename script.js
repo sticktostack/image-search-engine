@@ -15,7 +15,7 @@ let landscape = document.getElementById("landscape");
 function portraitImage() {
   keyword = SearchArea.value;
   fetch(
-    `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accesKey}&per_page=30&orientation=portrait`
+    `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accesKey}&per_page=34&orientation=portrait`
   )
     .then((response) => {
       return response.json();
