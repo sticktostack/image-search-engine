@@ -10,21 +10,110 @@
 </head>
 
 <body>
-    <div class="main">
-        <h1 class="header"><span>Search</span> any <span>image</span></h1>
-        <form id="Searchform">
-            <input type="text" id="Searcharea" placeholder="search here . . .">
-            <button id="searchbutton"><i class="ri-search-line"></i></button>
-            <select id="orientations">
-                <option id="blank" selected disabled>orientation</option>
-                <option id="potrait" value="potrait">Potrait</option>
-                <option id="landscape" value="landscape">Landscape</option>
-            </select>
-        </form>
-        <div id="imagecontainer"></div>
-        <div><button id="loadmorebtn">Load More</button></div>
-
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-camera-retro"></i>
+                <h1>Picnova</h1>
+            </div>
+            <p class="tagline">Discover stunning high-quality images from around the world</p>
+            
+            <div class="search-container">
+                <form class="search-form" id="searchForm">
+                    <div class="search-box">
+                        <input type="text" class="search-input" id="searchInput" placeholder="Search for images...">
+                    </div>
+                    <button type="submit" class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </form>
+                
+                <div class="filters">
+                    <select class="filter-select" id="orientationSelect">
+                        <option value="" selected>All Orientations</option>
+                        <option value="landscape">Landscape</option>
+                        <option value="portrait">Portrait</option>
+                        <option value="squarish">Square</option>
+                    </select>
+                    
+                    <select class="filter-select" id="colorSelect">
+                        <option value="" selected>Any Color</option>
+                        <option value="black_and_white">Black & White</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="orange">Orange</option>
+                        <option value="red">Red</option>
+                        <option value="purple">Purple</option>
+                        <option value="magenta">Magenta</option>
+                        <option value="green">Green</option>
+                        <option value="teal">Teal</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                    
+                    <select class="filter-select" id="sortSelect">
+                        <option value="relevant" selected>Relevant</option>
+                        <option value="latest">Latest</option>
+                        <option value="popular">Popular</option>
+                    </select>
+                </div>
+                
+                <div class="trending-searches">
+                    <div class="trending-tag" data-search="nature">Nature</div>
+                    <div class="trending-tag" data-search="technology">Technology</div>
+                    <div class="trending-tag" data-search="travel">Travel</div>
+                    <div class="trending-tag" data-search="food">Food</div>
+                    <div class="trending-tag" data-search="architecture">Architecture</div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="results-header" id="resultsHeader" style="display: none;">
+            <div>
+                <h2 class="results-title" id="resultsTitle">Search Results</h2>
+                <p class="results-count" id="resultsCount">0 images found</p>
+            </div>
+            <!-- <div class="sort-options">
+                <button class="sort-btn active" data-sort="grid">
+                    <i class="fas fa-th"></i> Grid
+                </button>
+                <button class="sort-btn" data-sort="masonry">
+                    <i class="fas fa-th-large"></i> Masonry
+                </button>
+            </div> -->
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Loading images...</p>
+        </div>
+        
+        <div class="image-grid" id="imageGrid"></div>
+        
+        <div class="empty-state" id="emptyState">
+            <i class="fas fa-images"></i>
+            <h3>No images yet</h3>
+            <p>Search for something to get started</p>
+        </div>
+        
+        <div class="load-more-container">
+            <button class="load-more-btn" id="loadMoreBtn" style="display: none;">
+                <i class="fas fa-plus"></i> Load More
+            </button>
+        </div>
     </div>
+    
+    <div class="image-modal" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-info" id="modalInfo"></div>
+        </div>
+    </div>
+    
+    <div class="toast" id="toast">Image saved to favorites!</div>
     <script src="script.js"></script>
 </body>
 
