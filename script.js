@@ -146,14 +146,11 @@
                 imageCard.innerHTML = `
                     <img src="${image.urls.small}" alt="${image.alt_description || 'Unsplash image'}" data-full="${image.urls.regular}">
                     <div class="image-info">
-                        <div class="image-user">
-                            <img class="user-avatar" src="${image.user.profile_image.small}" alt="${image.user.name}">
-                            <span class="user-name">${image.user.name}</span>
-                        </div>
+                        
                         <p class="image-desc">${image.description || 'No description available'}</p>
                         <div class="image-actions">
                             <button class="action-btn like-btn">
-                                <i class="far fa-heart"></i> ${image.likes}
+                                <i class="ri-heart-2-fill"></i> ${image.likes} 
                             </button>
                             <button class="action-btn download-btn" data-url="${image.links.download}">
                                 <i class="fas fa-download"></i> Download

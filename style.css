@@ -458,15 +458,18 @@
         }
 
         .trending-tag {
-            background: rgba(124, 58, 237, 0.2);
+            background: #121e2c;
             color: var(--primary);
             padding: 5px 15px;
             border-radius: 20px;
+            color: #ab9ae9;
             font-size: 0.85rem;
             cursor: pointer;
             transition: var(--transition);
         }
-
+        
         .trending-tag:hover {
+            color: #b9a6fd;
             background: rgba(124, 58, 237, 0.4);
+            
         }
